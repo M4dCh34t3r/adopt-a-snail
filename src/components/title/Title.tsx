@@ -1,4 +1,4 @@
-import { Text, Subtext } from './Title.style'
+import { Text, Subtext } from './style'
 
 interface TitleProps {
   text: string;
