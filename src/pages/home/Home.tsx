@@ -10,26 +10,26 @@ export function Home() {
       <List snails={[
             {
               id: 1,
-              name: 'Ana',
-              description: 'Ana description',
+              name: 'Ana Shelldon',
+              description:'Lorem ipsum dolor sit amet. Shelldon Shelldon Shelldon ana Shelldon ana Shelldon ana ana. Ana Shelldon ana Shelldon ana Shelldon ana Shelldon Shelldon ana Shelldon Shelldon Shelldon.',
               image: '/ana.png'
             },
             {
               id: 2,
-              name: 'Bob',
-              description: 'Bob description',
+              name: 'Bob Shells',
+              description: 'Lorem ipsum dolor sit amet. Bob bob Shells Shells Shells bob Shells Shells. Bob Shells bob bob Shells Shells. Shells bob Shells Shells Shells. Bob Shells Shells Shells Shells bob Shells?',
               image: '/bob.png'
             },
             {
               id: 3,
-              name: 'John',
-              description: 'John description',
-              image: '/John.png'
+              name: 'John Shelly',
+              description: 'Lorem ipsum dolor sit amet. Shelly john Shelly john john Shelly Shelly Shelly Shelly! John Shelly. . John Shelly.',
+              image: '/john.png'
             },
             {
               id: 4,
-              name: 'Maria',
-              description: 'Maria description',
+              name: 'Maria Shellington',
+              description: 'Lorem ipsum dolor sit amet. Shellington maria maria maria Shellington maria maria Shellington maria maria. Maria maria maria Shellington Shellington maria.',
               image: '/maria.png'
             }
           ]}

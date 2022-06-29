@@ -1,29 +1,55 @@
 import { Snail } from '../../data/@types/snail';
 import { TextLimiter } from '../../services/utils/textLimiter';
-import { Button, ListWrapper, Description, Image, Info, ListItem, Name } from './style'
+import { NameLimiter } from '../../services/utils/nameLimiter';
+import { Button, Description, Image, Info, Item, Name, Wrapper} from './style'
 
 interface ListProps {
   snails: Snail[];
 }
 
 export default function List(props: ListProps) {
-  const textMinSize = 100;
+  const anchorMouseOverHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const a: HTMLAnchorElement = event.currentTarget;
+    a.style.backgroundColor = "#ffaa80";
+  };
+
+  const anchorMouseOutHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const a: HTMLAnchorElement = event.currentTarget;
+    a.style.backgroundColor = "#ff8040";
+  };
+
+  const lIMouseOverHandler = (event: React.MouseEvent<HTMLLIElement>) => {
+    const lI: HTMLLIElement = event.currentTarget;
+    lI.style.backgroundColor = "#f9f9f9";
+  };
+
+  const lIMouseOutHandler = (event: React.MouseEvent<HTMLLIElement>) => {
+    const lI: HTMLLIElement = event.currentTarget;
+    lI.style.backgroundColor = "#f1f1f1";
+  };
+
+  const textMinSize = 96;
+
   return(
-    <ListWrapper>
-      {props.snails.map(snail => (
-        <ListItem key={ snail.id }>
+    <Wrapper>
+      { props.snails.map(snail => (
+        <Item key={ snail.id } 
+          onMouseOver={ lIMouseOverHandler }
+          onMouseOut={ lIMouseOutHandler }>
           <Image src={ snail.image } alt={ snail.name }/>
           <Info>
             <Name> { snail.name } </Name>
             <Description>
               { TextLimiter.limit(snail.description, textMinSize) }
               </Description>
-            <Button>
-              Adopt { snail.name }!
+            <Button href="#" 
+            onMouseOver={ anchorMouseOverHandler }
+            onMouseOut={ anchorMouseOutHandler }>
+            Adopt { NameLimiter.limit(snail.name) }!
             </Button>
           </Info>
-        </ListItem>
-      ))}
-    </ListWrapper>
+        </Item>
+      )) }
+    </Wrapper>
   );
 }
