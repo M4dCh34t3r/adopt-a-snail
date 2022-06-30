@@ -20,12 +20,12 @@ export default function List(props: ListProps) {
 
   const lIMouseOverHandler = (event: React.MouseEvent<HTMLLIElement>) => {
     const lI: HTMLLIElement = event.currentTarget;
-    lI.style.backgroundColor = "#f9f9f9";
+    lI.style.backgroundColor = "#f8f8f8";
   };
 
   const lIMouseOutHandler = (event: React.MouseEvent<HTMLLIElement>) => {
     const lI: HTMLLIElement = event.currentTarget;
-    lI.style.backgroundColor = "#f1f1f1";
+    lI.style.backgroundColor = "#e5e5e5";
   };
 
   const textMinSize = 96;

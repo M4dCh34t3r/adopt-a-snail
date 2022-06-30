@@ -21,9 +21,9 @@ export const Item = styled('li')`
   margin: 25px;
   padding: 25px;
   display: flex;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: all 0.5s ease;
-  background-color: #f0f0f0;
+  background-color: #e5e5e5;
   justify-content: space-evenly;
   
   @media(max-width: 800px) {
