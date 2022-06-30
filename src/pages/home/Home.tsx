@@ -6,7 +6,7 @@ export function Home() {
   return(
     <>
       <Header/>
-      <Title text="Pick a shell buddy..." subtext="And have a lot o fun together!"/>
+      <Title text="Pick a shell buddy..." subtext="And have a lot of fun together!"/>
       <List snails={[
             {
               id: 1,
